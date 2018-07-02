@@ -1,5 +1,12 @@
 lista=[]
-
+def suma(lista):
+    a=sum(lista)
+    return a
+def resta(lista):
+    resta = 0
+    for i in range (len(lista)):
+        resta = resta - lista[i]
+    return resta
 def promedio(lista):
     p = sum(lista)/len(lista)
     return p
