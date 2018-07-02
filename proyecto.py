@@ -1,12 +1,5 @@
 lista=[]
-def suma(lista):
-    a=sum(lista)
-    return a
-def resta(lista):
-    resta = 0
-    for i in range (len(lista)):
-        resta = resta - lista[i]
-    return resta
+
 def promedio(lista):
     p = sum(lista)/len(lista)
     return p
@@ -27,6 +20,14 @@ def multiplicacion(lista):
     for i in range (len(lista)):
         m = m*lista[i]
     return (m)
+def ordenar(lista):
+    for num in range(len(lista)-1,0,-1):
+        for j in range(num):
+            if lista[j]>lista[j+1]:
+                aux = lista[j]
+                lista[j]=lista[j+1]
+                lista[j+1]=aux
+    return lista
 
 for i in range(3):
     a=int(input())
@@ -36,5 +37,8 @@ r = resta(lista)
 p = promedio(lista)
 ma = mayor(lista)
 mu = multiplicacion(lista)
+o = ordenar(lista)
 print ("suma: ", s, " resta: ", r, " promedio: ", p, " mayor: ", ma, " multplicacion: ", mu)
+print ("lista ordenada: ", o)
 input()
+
